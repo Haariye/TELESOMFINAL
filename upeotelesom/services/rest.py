@@ -6,7 +6,7 @@ import requests
 
 
 @frappe.whitelist(allow_guest=True)
-def somali_send_sms(mobile, message):
+def send_sms(mobile, message):
 
     telesom_settings = frappe.db.get_all("Telesom Settings", ['username', 'password', 'sender', 'key'])
 
