@@ -1,6 +1,7 @@
 # Copyright (c) 2022, Geoffrey Karani, Upeosoft Limited and contributors
 # For license information, please see license.txt
 
+
 # import frappe
 # from upeotelesom.services.telescom_sms import UpeosoftTelesom
 
