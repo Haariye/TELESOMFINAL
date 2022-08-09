@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include upeotelesom *.css
+recursive-include upeotelesom *.csv
+recursive-include upeotelesom *.html
+recursive-include upeotelesom *.ico
+recursive-include upeotelesom *.js
+recursive-include upeotelesom *.json
+recursive-include upeotelesom *.md
+recursive-include upeotelesom *.png
+recursive-include upeotelesom *.py
+recursive-include upeotelesom *.svg
+recursive-include upeotelesom *.txt
+recursive-exclude upeotelesom *.pyc
