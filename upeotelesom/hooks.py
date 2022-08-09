@@ -95,11 +95,15 @@ app_license = "MIT"
 # ---------------
 # Hook on document methods and events
 
-doc_events = {
-	"Customer": {
-		"on_update": "upeotelesom.services.rest.welcome_customer",
-	},
-}
+
+
+# doc_events = {
+# 	"Customer": {
+# 		"on_update": "upeotelesom.services.rest.welcome_customer",
+# 	},
+# }
+
+
 
 # Scheduled Tasks
 # ---------------
