@@ -11,7 +11,11 @@
   "password",
   "column_break_3",
   "sender",
-  "key"
+  "key",
+  "test_details_section",
+  "mobile",
+  "message",
+  "send_test"
  ],
  "fields": [
   {
@@ -46,11 +50,34 @@
    "in_list_view": 1,
    "label": "Key",
    "reqd": 1
+  },
+  {
+   "fieldname": "test_details_section",
+   "fieldtype": "Section Break",
+   "label": "Test Details"
+  },
+  {
+   "fieldname": "mobile",
+   "fieldtype": "Data",
+   "label": "Mobile",
+   "reqd": 1
+  },
+  {
+   "fieldname": "message",
+   "fieldtype": "Small Text",
+   "label": "Message",
+   "reqd": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "send_test",
+   "fieldtype": "Button",
+   "label": "Send Test"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-08-09 20:36:16.129694",
+ "modified": "2022-08-11 16:46:53.483448",
  "modified_by": "Administrator",
  "module": "Upeosoft Telesom",
  "name": "Telesom Settings",
