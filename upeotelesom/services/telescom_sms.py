@@ -11,7 +11,7 @@ import requests
 class UpeosoftTelesom:
     def __init__(self):
         try:
-            self.username = frappe.db.get_value('SMS Parameter', {'parameter': 'usermname'}, ['value'])
+            self.username = frappe.db.get_value('SMS Parameter', {'parameter': 'username'}, ['value'])
             self.password = frappe.db.get_value('SMS Parameter', {'parameter': 'password'}, ['value'])
             self.sender = frappe.db.get_value('SMS Parameter', {'parameter': 'sender'}, ['value'])
             self.key = frappe.db.get_value('SMS Parameter', {'parameter': 'key'}, ['value'])
