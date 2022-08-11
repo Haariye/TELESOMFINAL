@@ -11,16 +11,12 @@ import requests
 class UpeosoftTelesom:
     def __init__(self):
         try:
-            telesom_settings = frappe.db.get_all("Telesom Settings", ['username', 'password', 'sender', 'key'])
+            self.username = frappe.db.get_value('SMS Parameter', {'parameter': 'usermname'}, ['value'])
+            self.password = frappe.db.get_value('SMS Parameter', {'parameter': 'password'}, ['value'])
+            self.sender = frappe.db.get_value('SMS Parameter', {'parameter': 'sender'}, ['value'])
+            self.key = frappe.db.get_value('SMS Parameter', {'parameter': 'key'}, ['value'])
 
-            if len(telesom_settings) > 1:
-                frappe.throw("You can only have one sender ID record in Telesom Settings.")
-            else:
-                self.username = telesom_settings[0].username
-                self.password = telesom_settings[0].password
-                self.sender = telesom_settings[0].sender
-                self.curentDate = self.get_current_date()
-                self.key = telesom_settings[0].key
+            self.curentDate = self.get_current_date()
 
         except Exception as e:
             frappe.throw(f"Received error response {str(e)}")
@@ -43,7 +39,9 @@ class UpeosoftTelesom:
 
             data = json.loads(response.text)
 
-            print(f"\n\n\n {data} \n\n\n")
+            print(f"\n\n\n { response.status_code } \n\n\n")
+
+            return response
 
             return data
 

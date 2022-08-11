@@ -133,11 +133,11 @@ app_license = "MIT"
 
 # Overriding Methods
 # ------------------------------
-#
-# override_whitelisted_methods = {
-# 	"frappe.desk.doctype.event.event.get_events": "upeotelesom.event.get_events"
-# }
-#
+
+override_whitelisted_methods = {
+	"frappe.core.doctype.sms_settings.send_request": "upeotelesom.services.rest.send_request"
+}
+
 # each overriding function accepts a `data` argument;
 # generated from the base implementation of the doctype dashboard,
 # along with any modifications made in other Frappe apps
@@ -173,6 +173,12 @@ user_data_fields = [
 		"doctype": "{doctype_4}"
 	}
 ]
+
+
+fixtures = [
+    "Custom Field"
+]
+
 
 # Authentication and authorization
 # --------------------------------
